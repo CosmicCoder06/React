@@ -1,0 +1,68 @@
+* { box-sizing: border-box; }
+html,body,#root { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, Roboto, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+  background: #f1f5f9;
+  color: #0f1724;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+}
+
+
+card,
+.card {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 6px 18px rgba(22, 40, 60, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+
+card:hover,
+.card:hover,
+card:focus,
+.card:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(22, 40, 60, 0.12);
+  outline: none;
+}
+
+
+card h1, card h2, card h3, .card h1, .card h2, .card h3 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  color: #0b1a2b;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+card p, .card p, card .description, .card .description {
+  margin: 0;
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+
+.card-meta, card .meta {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+
+@media (min-width: 768px) {
+  body { padding: 48px; }
+  card, .card { max-width: 520px; padding: 24px; }
+}
